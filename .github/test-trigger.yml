@@ -1,0 +1,10 @@
+name: test trigger deployment to preview 
+
+on:
+  pull_request:
+
+jobs:
+  deploy-docs-to-preview:
+    uses: new-work/delivery-github-workflows/.github/workflows/deploy-docs.yml@trigger_docs_deployment
+    with:
+      environment: preview
